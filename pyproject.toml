@@ -1,0 +1,23 @@
+[project]
+name = "cz-git-hooks"
+version = "0.0.1"
+description = "Custom git hooks for commitizen"
+authors = [
+    { name = "oniko94",email = "onikolaiev94@outlook.com" },
+]
+maintainers = [
+    { name = "oniko94", email = "admin@squalorware.tech" },
+]
+
+license = {text = "LGPL-2.1-or-later"}
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = [ "pre-commit", "commitizen", "semver", "developer-tools", "devops" ]
+
+[project.scripts]
+cz-post-commit = "cz_git_hooks.hooks:cz_post_commit"
+cz-prepare-msg = "cz_git_hooks.hooks:cz_prepare_msg"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

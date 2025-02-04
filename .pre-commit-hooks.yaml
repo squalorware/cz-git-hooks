@@ -1,0 +1,14 @@
+- id: cz-prepare-msg
+  name: Automatically generate a commit message
+  entry: cz-prepare-msg
+  language: python
+  language_version: python3
+  minimum_pre_commit_version: "1.4.3"
+  stages: [ prepare-commit-msg ]
+- id: cz-post-commit
+  name: Backup the commit message and clean up
+  entry: cz-post-commit
+  language: python
+  language_version: python3
+  minimum_pre_commit_version: "1.4.3"
+  stages: [ post-commit ]
